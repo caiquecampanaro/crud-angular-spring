@@ -7,14 +7,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.math.BigDecimal;
 @Data
 @Entity
 public class Produto {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @Column(length = 200, nullable = false)
     private String nome;
 
@@ -22,5 +23,5 @@ public class Produto {
     private String categoria;
 
     @Column(nullable = false)
-    private Number preco;
+    private BigDecimal preco;
 }

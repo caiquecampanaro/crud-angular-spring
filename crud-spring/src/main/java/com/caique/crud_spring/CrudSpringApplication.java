@@ -1,5 +1,7 @@
 package com.caique.crud_spring;
 
+import java.math.BigDecimal;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,7 +25,7 @@ public class CrudSpringApplication {
 			Produto p = new Produto();
 			p.setNome("Bolonha");
 			p.setCategoria("Ilícitos");
-			p.setPreco(25);
+			p.setPreco(new BigDecimal("25.00"));
 			
 			produtoRepository.save(p);
 		};

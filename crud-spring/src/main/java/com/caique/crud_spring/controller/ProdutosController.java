@@ -1,6 +1,5 @@
 package com.caique.crud_spring.controller;
 
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
