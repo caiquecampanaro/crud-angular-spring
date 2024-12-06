@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "1",
+    "nome": "Bolonha",
+    "categoria": "Ilícitos",
+    "preco": 40
+  },
+  {
+    "_id": "2",
+    "nome": "back",
+    "categoria": "Ilícitos",
+    "preco": 25
+  },
+  {
+    "_id": "3",
+    "nome": "vaper",
+    "categoria": "Ilícitos",
+    "preco": 80
+  },
+  {
+    "_id": "4",
+    "nome": "balinha",
+    "categoria": "Ilícitos",
+    "preco": 35
+  }
+]

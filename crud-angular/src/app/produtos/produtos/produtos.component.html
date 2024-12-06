@@ -1,1 +1,38 @@
-<p>produtos works!</p>
+<mat-card>
+  <mat-toolbar color="primary"> Produtos </mat-toolbar>
+
+  <div *ngIf="produtos$ | async as produtos; else loading">
+    <table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+
+      <!-- Position Nome -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let produtos"> {{produtos.nome}} </td>
+      </ng-container>
+
+      <!-- Name Categoria -->
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef> Categoria </th>
+        <td mat-cell *matCellDef="let produtos"> {{produtos.categoria}}
+          <mat-icon aria-hidden="false" aria-label="Example home icon">{{produtos.categoria | categoria}}</mat-icon>
+        </td>
+      </ng-container>
+
+      <!-- Weight preço -->
+      <ng-container matColumnDef="preco">
+        <th mat-header-cell *matHeaderCellDef> Preço </th>
+        <td mat-cell *matCellDef="let produtos">R$ {{produtos.preco}},00</td>
+
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</mat-card>
