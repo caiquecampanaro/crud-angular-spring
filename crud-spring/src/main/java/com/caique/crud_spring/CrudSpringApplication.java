@@ -7,9 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.caique.crud_spring.model.Produto;
 import com.caique.crud_spring.repository.ProdutoRepository;
-
-import model.Produto;
 
 @SpringBootApplication
 public class CrudSpringApplication {
@@ -28,7 +27,7 @@ public class CrudSpringApplication {
 			p.setCategoria("Ilícitos");
 			p.setPreco(new BigDecimal("30"));
 
-			produtoRepository.save(new Produto());
+			produtoRepository.save(p);
 		};
 	}
 

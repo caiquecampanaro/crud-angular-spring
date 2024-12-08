@@ -1,4 +1,4 @@
-package model;
+package com.caique.crud_spring.model;
 
 import java.math.BigDecimal;
 
