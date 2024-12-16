@@ -11,7 +11,7 @@ import com.caique.crud_spring.repository.ProdutoRepository;
 
 import lombok.AllArgsConstructor;
 
-@RestController // diz que essa classe tem um endpoint que da acesso ao post,delete,get\
+@RestController // diz que essa classe tem um endpoint que da acesso ao post,delete,get
 @RequestMapping("/api/produtos")
 @AllArgsConstructor
 public class ProdutoController {

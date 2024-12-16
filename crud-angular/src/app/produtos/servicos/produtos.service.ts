@@ -9,9 +9,9 @@ import { tap,first, delay } from 'rxjs/operators'
 })
 export class ProdutosService {
 
-  private readonly API = '/assets/produtos.json';
+  private readonly API = 'api/produtos';
 
-  constructor( private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   list() {
     return this.httpClient.get<Produto[]>(this.API)
